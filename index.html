@@ -332,7 +332,8 @@
                 </div>
                 <div class="Input">
                     <div class="input">
-                        <input id="mebleg" type="range" step="100" min="300" max="30000" placeholder="">
+                        <label for="mebleg">20000</label>
+                        <input type="range" value="20000" step="100" min="300" max="30000" id="mebleg" placeholder="">
                     </div>
                     <div class="double">
                         <h4>300</h4>
@@ -340,13 +341,16 @@
                     </div>
                     <div class="input-1">
                         <input id="faiz " type="range" step="100" min="300" max="30000" placeholder="">
+                        <label for="faiz">18%</label>
+                        <input id="faiz" value="18" type="range" step="1" min="12" max="32" placeholder="">
                     </div>
                     <div class="double-1">
                         <h4>12%</h4>
                         <h4>20%</h4>
                     </div>
                     <div class="input-2">
-                        <input id="ay" type="range" step="100" min="300" max="30000" placeholder="">
+                        <label for="ay">12 ay</label>
+                        <input id="ay" value="12" type="range" step="1" min="3" max="59" placeholder="">
                     </div>
                     <div class="double-2">
                         <h4>3 month</h4>
@@ -360,7 +364,7 @@
                         <h4>Monthly payment for cash loan</h4>
                     </div>
                     <div class="text-2">
-                        <h1 id="price">3417.01 ₼</h1>
+                        <h1><span id="ayliqOdenis">3417.01 </span> ₼</h1>
                     </div>
                     <div class="button-1">
                         <ul>
@@ -716,6 +720,7 @@
             <h1>© 2023 «Kapital Bank» OJSC. All rights reserved</h1>
         </div>
     </footer>
+    <script src="./app.js"></script>
 </body>
 
 </html>
