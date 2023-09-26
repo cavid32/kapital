@@ -13,5 +13,3 @@ meblegInputu.addEventListener('input', function () {
     yekunNetice = yekunFaizDaxilMebleg / ayInputu.value;
     ayliqOdenisXanasi.textContent = yekunNetice.toFixed(2)
 })
-
-// salam
