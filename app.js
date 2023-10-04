@@ -159,13 +159,15 @@ const nexticon=document.getElementById("next-icon");
 
 let change=0;
 
-function gosder(saygac){
-  online.innerText=kartMelumatlari2[change].title;
-  up.textContent=kartMelumatlari2[change].description;
-  img2.src=kartMelumatlari2[change].image;
+function gosder(change){
+  console.log(change);
+  online.innerText=kartMelumatlari2.at(change).title;
+  up.textContent=kartMelumatlari2.at(change).description;
+  img2.src=kartMelumatlari2.at(change).image;
 }
 
 function PrevIconFunciton(){
+  change--;
   if(change<0){
     change=kartMelumatlari2.length-1
     gosder(change)
