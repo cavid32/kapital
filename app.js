@@ -9,7 +9,6 @@ const LabelAy = document.getElementById("LabelAy");
 const muddet = document.getElementById("muddet");
 
 
-
 let bankinfaizi = 0;
 let bankaodeyeceyim = 0;
 let ayliqodenis = 0;
@@ -114,3 +113,82 @@ function nextSlideFunction() {
 
 previousSlide.addEventListener('click', previousSlideFunction)
 nextSlide.addEventListener('click', nextSlideFunction)
+
+
+
+
+
+const kartMelumatlari2=[
+  {
+    id:1,
+      title:"The interest rate",
+      description:'you have been waiting for!',
+      image:"https://www.kapitalbank.az/images/slider/version_111/gtk-109den-baslayan-kredit1685446155.png",  
+
+},
+{
+  id:2,
+  title:"Mortgage",
+  description:" For those who want to own or renovate an apartment ",
+    href:"More Details",
+    image:"https://www.kapitalbank.az/images/slider/version_48/ipoteka-krediti1655890221.png",
+},
+{
+  id:3,
+  title:"Weekend work hours",
+  description:" Many of our branches are open on Saturdays and Sundays.",
+  image:"https://www.kapitalbank.az/images/slider/version_1/heftesonu-is-rejimi1639578179.webp",
+
+},
+{
+id:4,
+title:"Maaşın 20 mislinədək",
+description:"kredit imkanı ödəyin!",
+image:"https://www.kapitalbank.az/images/slider/version_6/neft-iscilerine-ozel-kampaniya1694781620.png",  
+
+
+},
+
+]
+const online =document.getElementById("online");
+const up=document.getElementById("up");
+const order1= document.getElementById("order-a");
+const img1=document.getElementById("img2");
+const PrevIcon=document.getElementById("prev-icon");
+const nexticon=document.getElementById("next-icon");
+
+let change=0;
+
+function gosder(saygac){
+  online.innerText=kartMelumatlari2[change].title;
+  up.textContent=kartMelumatlari2[change].description;
+  img2.src=kartMelumatlari2[change].image;
+}
+
+function PrevIconFunciton(){
+  if(change<0){
+    change=kartMelumatlari2.length-1
+    gosder(change)
+    
+  }
+  else{
+    change--;
+    gosder(change)  
+  }
+}
+
+
+function nexticonFunction(){
+  change++;
+  if(change==kartMelumatlari2.length){
+    change=0;
+    gosder(change)
+  }
+  else{
+    gosder(change)
+  }
+}
+
+
+PrevIcon.addEventListener("click",PrevIconFunciton);
+nexticon.addEventListener("click",nexticonFunction);
