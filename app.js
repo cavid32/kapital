@@ -191,6 +191,7 @@ function nexticonFunction(){
   }
 }
 
+setInterval(nexticonFunction, 3000)
 
 PrevIcon.addEventListener("click",PrevIconFunciton);
 nexticon.addEventListener("click",nexticonFunction);
